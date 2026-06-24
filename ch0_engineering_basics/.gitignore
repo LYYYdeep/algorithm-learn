@@ -1,0 +1,8 @@
+# Generated local files
+.DS_Store
+__pycache__/
+*.pyc
+
+# Practice outputs
+*.log
+*.tmp
