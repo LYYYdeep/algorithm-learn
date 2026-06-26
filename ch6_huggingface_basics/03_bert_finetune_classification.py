@@ -172,7 +172,7 @@ def train_one_epoch(model, dataloader, optimizer, device):
         total_loss += loss.item() * batch["input_ids"].size(0)
         logits = outputs.logits
         predictions = torch.argmax(logits, dim=1)
-        correct += (predictions == batch["label"]).sum().item()
+        correct += (predictions == batch["labels"]).sum().item()
         total += batch["input_ids"].size(0)
 
     avg_loss = total_loss / total
@@ -196,7 +196,7 @@ def evaluate(model, dataloader, device):
         total_loss += loss.item() * batch["input_ids"].size(0)
         logits = outputs.logits
         predictions = torch.argmax(logits, dim=1)
-        correct += (predictions == batch["label"]).sum().item()
+        correct += (predictions == batch["labels"]).sum().item()
         total += batch["input_ids"].size(0)
 
     avg_loss = total_loss / total
