@@ -11,7 +11,7 @@ from transformers import (
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 
 # ===== 配置 ======
-model_name = "Qwen/Qwen2-0.5B-Instrict"
+model_name = "Qwen/Qwen2-0.5B-Instruct"
 dataset_name = "silk-road/alpaca-data-gpt4-chinese"
 output_dir = "./qwen2-0.5b-lora"
 
